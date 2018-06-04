@@ -109,6 +109,7 @@ namespace VirtualPet
                 TiredAlert(false);
             }
 
+
             bool HungerAlert(bool status)
             {
                 hungerAlert = status;

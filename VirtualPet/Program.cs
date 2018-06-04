@@ -16,6 +16,8 @@ namespace VirtualPet
 
             Console.WriteLine("Time to check on {0} ! Type yes to continue.", pickle.Name);
             string exitResponse = Console.ReadLine().ToLower();
+
+            //WHILE LOOP TO RE-DISPLAY MENU WHEN 'YES' IS TYPED
             while (exitResponse.Equals("yes"))
             {
                 Console.WriteLine("Please select from the following menu to check on {0}.", pickle.Name);
@@ -26,10 +28,16 @@ namespace VirtualPet
                 Console.WriteLine("Select 4 to let {0} take a nap.", pickle.Name);
                 int userChoice = int.Parse(Console.ReadLine());
 
+
                 switch (userChoice)
                 {
                     case 1:
                         pickle.Tick();
+                        Console.WriteLine("Pickle The Pitbull:");
+                        Console.WriteLine("Hunger: {0}%", pickle.Hunger);
+                        Console.WriteLine("Bored: {0}%", pickle.Bored);
+                        Console.WriteLine("Tired: {0}%", pickle.Tired);
+
                         if (pickle.HungerAlert)
                         {
                             Console.WriteLine("{0} is {1}% hungry and needs to be fed.", pickle.Name, pickle.Hunger);
@@ -54,7 +62,8 @@ namespace VirtualPet
                             pickle.SetTired(newTired);
                         }
 
-                        Console.WriteLine("{0} is {1}% hungry, {2}% bored, and {3}% sleepy.", pickle.Name, pickle.Hunger, pickle.Bored, pickle.Tired);
+                        //Console.WriteLine("{0} is {1}% hungry, {2}% bored, and {3}% sleepy.", pickle.Name, pickle.Hunger, pickle.Bored, pickle.Tired);
+                        //I had this sentence here before I added back the numbered status menu.
 
                         break;
                     case 2:
