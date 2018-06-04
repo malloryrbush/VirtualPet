@@ -78,7 +78,7 @@ namespace VirtualPet
                     default:
                         break;
                 }
-                Console.WriteLine("Select 1 to check on {0} again.", pickle.Name);
+                Console.WriteLine("Type yes to check on {0} again.", pickle.Name);
                 exitResponse = Console.ReadLine().ToLower();
 
             }

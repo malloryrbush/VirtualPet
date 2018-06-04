@@ -74,6 +74,7 @@ namespace VirtualPet
             this.hunger = hunger;
             this.bored = bored;
             this.tired = tired;
+            this.name = name;
         }
         //END LOADED CONSTRUCTOR
 
